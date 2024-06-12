@@ -6,10 +6,12 @@ on:
 
 jobs:
   build-docc:
-  - id: foo
-    uses: 0xWDG/build-documentation@main
-    with:
-      product: SimpleNetworking
-      # temppath: tmpdocs
-      # branch: docs
-      iOS: false
+    runs-on: macos-latest
+    steps:
+      - name: Build documentation
+        uses: 0xWDG/build-documentation@main
+        with:
+          product: SimpleNetworking
+          # temppath: tmpdocs
+          # branch: docs
+          iOS: false
