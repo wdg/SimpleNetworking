@@ -1,0 +1,15 @@
+on:
+  # Run on push to main branch
+  push:
+  # Dispatch if triggered using Github (website)
+  workflow_dispatch:
+
+jobs:
+  build-docc:
+    - id: foo
+      uses: 0xWDG/build-documentation@main
+      with:
+        product: SimpleNetworking
+        # temppath: tmpdocs
+        # branch: docs
+        iOS: false
