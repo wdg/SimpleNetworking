@@ -11,7 +11,7 @@ jobs:
       - name: Build documentation
         uses: 0xWDG/build-documentation@main
         with:
-          product: SimpleNetworking
+          # product: SimpleNetworking
           # temppath: tmpdocs
           # branch: docs
           iOS: false
