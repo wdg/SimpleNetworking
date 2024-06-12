@@ -1,17 +1,20 @@
 on:
   # Run on push to main branch
   push:
+    branches:
+      - main
+
   # Dispatch if triggered using Github (website)
   workflow_dispatch:
 
 jobs:
-  build-docc:
+  Build-documentation:
     runs-on: macos-latest
     steps:
       - name: Build documentation
         uses: 0xWDG/build-documentation@main
-        with:
-          # product: SimpleNetworking
-          # temppath: tmpdocs
-          # branch: docs
-          iOS: false
+        # with:
+        #   product: Product-Name
+        #   temppath: tmpdocs
+        #   branch: documentation
+        #   iOS: false # Build for iOS
